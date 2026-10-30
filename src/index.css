@@ -1,0 +1,108 @@
+:root {
+  --primary: #15803d;
+  --primary-hover: #166534;
+  --primary-light: #dcfce7;
+  --primary-glow: rgba(22, 163, 74, 0.15);
+  --accent-yellow: #f59e0b;
+  --accent-blue: #0284c7;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --bg-page: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --footer-dark: #0f1f17;
+  --footer-bottom: #09140f;
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/* Subtle selection highlight in brand green */
+::selection {
+  background-color: #86efac;
+  color: #064e3b;
+}
+
+/* Form Input Smooth Focus Transitions */
+input, select, textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #16a34a !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18) !important;
+}
+
+/* Image Clip-Path Reveal Utility */
+.clip-reveal-wrap {
+  overflow: hidden;
+}
+
+.clip-reveal-wrap img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clip-reveal-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}

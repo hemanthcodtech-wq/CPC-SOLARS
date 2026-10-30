@@ -1,0 +1,22 @@
+{
+  "name": "Crystal Power Controls",
+  "short_name": "CPC Solar",
+  "description": "Leading Turnkey Solar EPC Solutions Provider in India",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06140c",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

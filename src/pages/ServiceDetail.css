@@ -1,0 +1,643 @@
+.service-detail-page {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ========================================================
+   ENHANCED HERO BANNER
+   ======================================================== */
+.sd-hero-section {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #06140c;
+}
+
+.sd-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sd-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.03);
+}
+
+.sd-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 20, 12, 0.96) 0%,
+    rgba(6, 20, 12, 0.88) 46%,
+    rgba(6, 20, 12, 0.55) 78%,
+    rgba(6, 20, 12, 0.3) 100%
+  );
+}
+
+.sd-hero-glow {
+  position: absolute;
+  top: -10%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(34, 197, 94, 0.16) 0%,
+    rgba(16, 185, 129, 0.04) 50%,
+    transparent 70%
+  );
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.sd-hero-container {
+  position: relative;
+  z-index: 3;
+  padding-top: 60px;
+  padding-bottom: 70px;
+  width: 100%;
+}
+
+.sd-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.sd-hero-content {
+  max-width: 680px;
+}
+
+.sd-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+
+.badge-sparkle {
+  color: #fbbf24;
+}
+
+.sd-hero-title {
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 14px;
+}
+
+.sd-hero-highlight {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 60%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.sd-hero-tagline {
+  color: #86efac;
+  font-size: 16.5px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.sd-hero-desc {
+  color: #cbd5e1;
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.sd-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Trust Indicators */
+.sd-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.trust-pill-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.trust-dot-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* Floating Glassmorphic Specs Card */
+.sd-hero-card-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sd-floating-glass-card {
+  background: rgba(11, 26, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 22px;
+  padding: 32px 28px;
+  color: #ffffff;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 400px;
+}
+
+.sd-glass-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sd-glass-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-glass-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sd-glass-sub {
+  font-size: 12px;
+  color: #86efac;
+}
+
+.sd-glass-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.sd-spec-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.sd-spec-lbl {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+
+.sd-spec-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4ade80;
+  line-height: 1.25;
+}
+
+.sd-glass-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  color: #a7f3d0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================================
+   01. INTRO & BENEFITS
+   ======================================================== */
+.sd-intro-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.sd-two-col-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.sd-intro-lead {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.sd-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sd-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.benefit-check-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.sd-image-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.sd-showcase-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.sd-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(11, 26, 18, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 14px;
+  padding: 16px 20px;
+  color: #ffffff;
+}
+
+.sd-badge-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: #4ade80;
+  line-height: 1;
+}
+
+.sd-badge-text {
+  font-size: 12px;
+  color: #cbd5e1;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ========================================================
+   02. CAPABILITIES
+   ======================================================== */
+.sd-capabilities-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sd-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sd-cap-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 24px;
+  transition: all 0.2s ease;
+}
+
+.sd-cap-card:hover {
+  border-color: #86efac;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.08);
+}
+
+.sd-cap-num {
+  font-size: 24px;
+  font-weight: 900;
+  color: #16a34a;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.sd-cap-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.sd-cap-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ========================================================
+   03. PROCESS TIMELINE
+   ======================================================== */
+.sd-process-section {
+  padding: 80px 0;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sd-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.sd-step-node {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.sd-step-node:hover {
+  background: #ffffff;
+  border-color: #86efac;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.sd-step-bubble {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.sd-step-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+/* ========================================================
+   04. PROJECTS
+   ======================================================== */
+.sd-projects-section {
+  padding: 80px 0;
+  background: #fafbfc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sd-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.sd-project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.sd-proj-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.sd-proj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sd-proj-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.sd-proj-body {
+  padding: 22px;
+}
+
+.sd-proj-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.sd-proj-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ========================================================
+   05. FAQS
+   ======================================================== */
+.sd-faq-section {
+  padding: 80px 0;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sd-faq-box {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sd-faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.sd-faq-open {
+  border-color: #86efac;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.05);
+}
+
+.sd-faq-btn {
+  width: 100%;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: transparent;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f172a;
+  gap: 14px;
+}
+
+.sd-faq-q {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sd-faq-q-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.sd-faq-chevron {
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sd-faq-open .sd-faq-chevron {
+  transform: rotate(180deg);
+  color: #16a34a;
+}
+
+.sd-faq-ans {
+  padding: 0 22px 20px 50px;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ========================================================
+   ENQUIRY & CLOSING
+   ======================================================== */
+.sd-enquiry-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sd-closing-section {
+  padding: 0 0 80px 0;
+  background-color: #f8fafc;
+}
+
+.sd-closing-banner {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 60%, #166534 100%);
+  border-radius: 24px;
+  padding: 50px 48px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(22, 163, 74, 0.3);
+}
+
+.sd-closing-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.sd-closing-desc {
+  font-size: 16px;
+  color: #dcfce7;
+  max-width: 600px;
+  margin: 0 auto 26px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .sd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sd-hero-card-col {
+    justify-content: flex-start;
+  }
+  .sd-floating-glass-card {
+    max-width: 100%;
+  }
+  .sd-two-col-grid,
+  .sd-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .sd-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sd-hero-title {
+    font-size: 30px;
+  }
+  .sd-capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+}

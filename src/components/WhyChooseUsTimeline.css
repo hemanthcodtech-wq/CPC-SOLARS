@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Why Choose Us Timeline Infographic Styles - Precision 3-Column Grid
+   ========================================================================== */
+
+.why-choose-us-section {
+  padding: 85px 0 95px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.why-choose-heading {
+  color: #1e3a8a;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+}
+
+.why-choose-accent-bar {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e40af 0%, #facc15 60%, #16a34a 100%);
+  border-radius: 9999px;
+  margin: 0 auto 20px;
+}
+
+.why-choose-intro-lead {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  text-align: center;
+}
+
+/* Timeline Container */
+.timeline-spine-wrapper {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* Continuous vertical central line */
+.timeline-central-line {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: linear-gradient(180deg, #eab308 0%, #38bdf8 50%, #22c55e 100%);
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+.timeline-items-list-flow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 3-Column Grid: [Left Card / Empty] [Center Teardrop Node] [Right Card / Empty] */
+.timeline-row-item {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-grid-col {
+  position: relative;
+  display: flex;
+}
+
+.timeline-col-left {
+  justify-content: flex-end;
+}
+
+.timeline-col-center {
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.timeline-col-right {
+  justify-content: flex-start;
+}
+
+.timeline-empty-spacer {
+  width: 100%;
+}
+
+/* Content Card Box */
+.timeline-content-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 26px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.timeline-content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+  border-color: #cbd5e1;
+}
+
+/* Badge Pill Header */
+.timeline-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge-arrow {
+  font-size: 0.72rem;
+  opacity: 0.75;
+  letter-spacing: -0.1em;
+}
+
+.badge-blue {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+}
+
+.badge-blue-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.badge-green {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+}
+
+/* Bullet Points */
+.timeline-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-point-li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.timeline-bullet-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563eb;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.row-left .timeline-bullet-dot {
+  background: #16a34a;
+}
+
+.timeline-point-txt {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Central Teardrop Yellow Node with White Border */
+.timeline-node-halo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50% 50% 50% 0; /* Teardrop shape */
+  transform: rotate(-45deg);
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.timeline-row-item:hover .timeline-node-halo {
+  transform: rotate(-45deg) scale(1.1);
+}
+
+.timeline-node-inner {
+  transform: rotate(45deg); /* Counter-rotate icon back upright */
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 920px) {
+  /* On tablets and mobile: Shift spine to the left */
+  .timeline-spine-wrapper {
+    padding: 10px 0;
+  }
+
+  .timeline-central-line {
+    left: 30px;
+    transform: none;
+  }
+
+  .timeline-row-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .timeline-col-center {
+    order: 1;
+    width: 50px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+  }
+
+  .timeline-col-left,
+  .timeline-col-right {
+    order: 2;
+    flex-grow: 1;
+    width: calc(100% - 66px);
+    max-width: 100%;
+  }
+
+  .timeline-empty-spacer {
+    display: none;
+  }
+
+  .timeline-node-halo {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+  }
+
+  .timeline-node-inner svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-content-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .why-choose-us-section {
+    padding: 50px 0 60px;
+  }
+
+  .timeline-central-line {
+    left: 20px;
+  }
+
+  .timeline-row-item {
+    gap: 12px;
+  }
+
+  .timeline-col-center {
+    width: 38px;
+  }
+
+  .timeline-node-halo {
+    width: 38px;
+    height: 38px;
+    border-width: 2.5px;
+  }
+
+  .timeline-node-inner svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-col-left,
+  .timeline-col-right {
+    width: calc(100% - 50px);
+  }
+
+  .timeline-content-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .timeline-badge-pill {
+    font-size: 0.72rem;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+  }
+
+  .timeline-point-txt {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+}

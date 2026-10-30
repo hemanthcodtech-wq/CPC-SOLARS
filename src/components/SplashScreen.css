@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Crystal Power Controls (CPC) - Premium Cinematic Splash Screen
+   ========================================================================== */
+
+.cpc-splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #03140b;
+  user-select: none;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  perspective: 1000px;
+}
+
+/* Background Atmosphere */
+.cpc-splash-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 90%, #082918 0%, #03140b 55%, #010804 100%);
+  overflow: hidden;
+}
+
+/* Subtle Aurora Light Sheen */
+.cpc-radial-aurora {
+  position: absolute;
+  width: 140vw;
+  height: 90vh;
+  left: -20vw;
+  bottom: -20vh;
+  background: radial-gradient(ellipse at 50% 100%, rgba(34, 197, 94, 0.15) 0%, rgba(245, 158, 11, 0.08) 40%, transparent 75%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.cpc-ambient-dust {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.35;
+}
+
+/* Skip Button */
+.cpc-splash-skip {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(4, 20, 11, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cpc-splash-skip:hover {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(74, 222, 128, 0.6);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2);
+}
+
+/* Horizon & Solar Array Stage (Positioned with clear vertical visibility) */
+.cpc-horizon-stage {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  height: 56%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+/* Golden Dawn Atmospheric Glow */
+.cpc-dawn-glow {
+  position: absolute;
+  bottom: 0px;
+  width: 900px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.45) 0%, rgba(245, 158, 11, 0.2) 40%, rgba(34, 197, 94, 0.1) 70%, transparent 85%);
+  filter: blur(50px);
+}
+
+/* Golden Rising Sun */
+.cpc-golden-sun {
+  position: absolute;
+  bottom: 160px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cpc-sun-core {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fffbeb 0%, #fef08a 25%, #fbbf24 60%, #f59e0b 100%);
+  box-shadow:
+    0 0 45px rgba(251, 191, 36, 0.8),
+    0 0 100px rgba(245, 158, 11, 0.5),
+    0 0 160px rgba(34, 197, 94, 0.35);
+}
+
+.cpc-sun-flares {
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(254, 240, 138, 0.35) 0%, transparent 70%);
+  filter: blur(12px);
+}
+
+/* Radial Sunlight Rays spreading outward */
+.cpc-sun-rays {
+  position: absolute;
+  bottom: 120px;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(251, 191, 36, 0) 0deg,
+    rgba(254, 240, 138, 0.25) 15deg,
+    rgba(251, 191, 36, 0) 30deg,
+    rgba(34, 197, 94, 0.18) 50deg,
+    rgba(251, 191, 36, 0) 70deg,
+    rgba(254, 240, 138, 0.3) 90deg,
+    rgba(251, 191, 36, 0) 115deg,
+    rgba(34, 197, 94, 0.2) 140deg,
+    rgba(251, 191, 36, 0) 165deg,
+    rgba(254, 240, 138, 0.3) 180deg
+  );
+  filter: blur(16px);
+  mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
+}
+
+/* Solar Array SVG Wrapper */
+.cpc-solar-array-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.cpc-solar-array-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 -10px 30px rgba(0, 0, 0, 0.6));
+}
+
+/* Glint sweep animation */
+.cpc-panel-glint {
+  animation: glintMove 2.6s ease-in-out infinite alternate;
+}
+
+@keyframes glintMove {
+  0% { transform: translateX(-15%); opacity: 0.15; }
+  100% { transform: translateX(15%); opacity: 0.45; }
+}
+
+/* Flowing Particles Stream */
+.cpc-particles-stream {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cpc-energy-particle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 10%, #86efac 60%, #16a34a 100%);
+  box-shadow:
+    0 0 10px #4ade80,
+    0 0 20px #22c55e,
+    0 0 30px #f59e0b;
+}
+
+/* Energy Shockwave from panels */
+.cpc-energy-shockwave {
+  position: absolute;
+  bottom: 80px;
+  width: 400px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid rgba(74, 222, 128, 0.65);
+  box-shadow: 0 0 35px rgba(34, 197, 94, 0.45), inset 0 0 25px rgba(251, 191, 36, 0.35);
+  filter: blur(2px);
+}
+
+/* ==========================================================================
+   Center Brand Stage
+   ========================================================================== */
+
+.cpc-brand-center {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  margin-top: -100px;
+}
+
+/* Halo behind Logo */
+.cpc-logo-halo {
+  position: absolute;
+  width: 440px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.35) 0%, rgba(245, 158, 11, 0.18) 45%, transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Logo Sweep & Lockup */
+.cpc-logo-container {
+  position: relative;
+}
+
+.cpc-logo-sweep-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 24px;
+  border-radius: 16px;
+  background: rgba(3, 20, 11, 0.55);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(34, 197, 94, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Diagonal Light Sweep Sheen */
+.cpc-logo-light-sweep {
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 80%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(251, 191, 36, 0.75) 65%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  animation: logoSweep 2.2s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+  pointer-events: none;
+}
+
+@keyframes logoSweep {
+  0% { left: -100%; opacity: 0; }
+  30% { opacity: 1; }
+  100% { left: 160%; opacity: 0; }
+}
+
+/* Canonical Logo Lockup using src/assets/logo.png */
+.cpc-splash-logo-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.cpc-splash-logo-img {
+  max-height: 100px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.45)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+}
+
+/* Glowing Divider Line */
+.cpc-splash-divider {
+  width: 260px;
+  height: 2px;
+  margin: 18px 0 14px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(245, 158, 11, 0.8) 25%,
+    rgba(74, 222, 128, 1) 50%,
+    rgba(245, 158, 11, 0.8) 75%,
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.8);
+  transform-origin: center;
+}
+
+/* Brand Tagline */
+.cpc-splash-tagline {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: #f1f5f9;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Bottom Badge */
+.cpc-splash-bottom-badge {
+  position: absolute;
+  bottom: 24px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .cpc-splash-overlay {
+    padding: 20px 16px;
+  }
+
+  .cpc-splash-skip {
+    top: 16px;
+    right: 16px;
+    padding: 6px 14px;
+    font-size: 0.72rem;
+    background: rgba(3, 20, 11, 0.85);
+    border-color: rgba(74, 222, 128, 0.4);
+  }
+
+  /* Shift brand center slightly higher so it never covers the panels */
+  .cpc-brand-center {
+    margin-top: -110px;
+    padding: 0 12px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .cpc-logo-halo {
+    width: 280px;
+    height: 160px;
+  }
+
+  .cpc-logo-sweep-wrapper {
+    padding: 10px 18px;
+    border-radius: 14px;
+  }
+
+  .cpc-splash-logo-img {
+    max-height: 64px;
+    max-width: 200px;
+  }
+
+  .cpc-splash-divider {
+    width: 180px;
+    margin: 12px 0 10px;
+  }
+
+  .cpc-splash-tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+  }
+
+  /* Elevate the solar horizon stage to be clearly in view */
+  .cpc-horizon-stage {
+    bottom: 12%;
+    height: 52%;
+  }
+
+  .cpc-dawn-glow {
+    width: 100vw;
+    height: 280px;
+    bottom: 20px;
+  }
+
+  .cpc-golden-sun {
+    bottom: 120px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .cpc-sun-core {
+    width: 72px;
+    height: 72px;
+  }
+
+  .cpc-sun-rays {
+    width: 480px;
+    height: 480px;
+    bottom: 80px;
+  }
+
+  .cpc-solar-array-wrapper {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .cpc-splash-bottom-badge {
+    bottom: 16px;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0 16px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cpc-brand-center {
+    margin-top: -95px;
+  }
+
+  .cpc-splash-logo-img {
+    max-height: 54px;
+    max-width: 170px;
+  }
+
+  .cpc-logo-sweep-wrapper {
+    padding: 8px 14px;
+  }
+
+  .cpc-splash-divider {
+    width: 130px;
+    margin: 10px 0 8px;
+  }
+
+  .cpc-splash-tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.11em;
+  }
+
+  .cpc-horizon-stage {
+    bottom: 14%;
+    height: 50%;
+  }
+
+  .cpc-golden-sun {
+    bottom: 100px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .cpc-sun-core {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cpc-solar-array-wrapper {
+    height: 175px;
+    margin-bottom: 5px;
+  }
+
+  .cpc-splash-bottom-badge span {
+    display: block;
+    line-height: 1.4;
+  }
+}
+
+/* Reduced Motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .cpc-dawn-glow,
+  .cpc-golden-sun,
+  .cpc-sun-rays,
+  .cpc-solar-array-wrapper,
+  .cpc-energy-shockwave,
+  .cpc-logo-container,
+  .cpc-splash-divider,
+  .cpc-splash-tagline {
+    animation: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  .cpc-panel-glint,
+  .cpc-logo-light-sweep {
+    display: none !important;
+  }
+}
+
