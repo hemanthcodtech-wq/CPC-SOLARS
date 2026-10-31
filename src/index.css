@@ -36,6 +36,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
+  width: 100%;
+}
+
+#root {
+  overflow-x: clip;
+  width: 100%;
+}
+
+.app-container {
+  overflow-x: clip;
+  width: 100%;
+}
+
+main {
+  overflow-x: clip;
+  width: 100%;
 }
 
 /* Subtle selection highlight in brand green */
@@ -104,5 +120,10 @@ img {
 @media (max-width: 640px) {
   .container {
     padding: 0 16px;
+  }
+
+  /* Prevent floating contact button from obscuring body text at bottom */
+  body {
+    padding-bottom: 24px;
   }
 }

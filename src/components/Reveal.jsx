@@ -16,11 +16,15 @@ export default function Reveal({
   className = '',
   amount = 0.18, // trigger threshold
 }) {
+  // Disable lateral horizontal shifts on mobile screens to prevent viewport swaying left/right
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  const effectiveDirection = isMobile && (direction === 'left' || direction === 'right') ? 'up' : direction;
+
   const getVariants = () => {
-    switch (direction) {
+    switch (effectiveDirection) {
       case 'up':
         return {
-          hidden: { opacity: 0, y: 55, scale: 0.98, filter: 'blur(6px)' },
+          hidden: { opacity: 0, y: 35, scale: 0.98, filter: 'blur(4px)' },
           visible: {
             opacity: 1,
             y: 0,
@@ -31,7 +35,7 @@ export default function Reveal({
         };
       case 'down':
         return {
-          hidden: { opacity: 0, y: -55, scale: 0.98, filter: 'blur(6px)' },
+          hidden: { opacity: 0, y: -35, scale: 0.98, filter: 'blur(4px)' },
           visible: {
             opacity: 1,
             y: 0,
@@ -42,7 +46,7 @@ export default function Reveal({
         };
       case 'left':
         return {
-          hidden: { opacity: 0, x: 55, filter: 'blur(6px)' },
+          hidden: { opacity: 0, x: 40, filter: 'blur(4px)' },
           visible: {
             opacity: 1,
             x: 0,
@@ -52,7 +56,7 @@ export default function Reveal({
         };
       case 'right':
         return {
-          hidden: { opacity: 0, x: -55, filter: 'blur(6px)' },
+          hidden: { opacity: 0, x: -40, filter: 'blur(4px)' },
           visible: {
             opacity: 1,
             x: 0,

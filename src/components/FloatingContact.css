@@ -137,13 +137,14 @@
 
 @media (max-width: 768px) {
   .floating-contact-container {
-    bottom: 20px;
-    left: 20px;
+    bottom: 16px;
+    left: 16px;
   }
 
   .floating-main-trigger {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
   }
 
   .sub-icon-box {
@@ -153,6 +154,19 @@
 
   .floating-sub-btn {
     padding: 8px 14px 8px 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-contact-container {
+    bottom: 14px;
+    left: 12px;
+  }
+
+  .floating-main-trigger {
+    width: 42px;
+    height: 42px;
   }
 }
 

@@ -1379,13 +1379,13 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 520px;
+    min-height: 560px;
     align-items: center;
   }
 
   .hero-content {
-    padding-top: 36px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 70px;
   }
 
   /* Clear image: lighter subtle gradient so the solar photo shines cleanly through */
@@ -1419,23 +1419,39 @@
   }
 
   .hero-title {
-    font-size: 30px;
-    line-height: 1.2;
-    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 1.22;
+    margin-bottom: 10px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   }
 
   .hero-subtitle {
-    font-size: 14px;
-    line-height: 1.55;
-    margin-bottom: 20px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 16px;
     color: #e2e8f0;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    /* Keep mobile subtitle punchy: max 3 lines on small screen */
+    /* Keep mobile subtitle punchy: max 2 lines on small screen */
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    padding: 11px 20px;
+    font-size: 13.5px;
+    border-radius: 9999px;
   }
 
   .hero-nav-arrow {
@@ -1497,12 +1513,12 @@
 
 @media (max-width: 540px) {
   .hero-section {
-    min-height: 480px;
+    min-height: 520px;
   }
 
   .hero-content {
-    padding-top: 28px;
-    padding-bottom: 50px;
+    padding-top: 24px;
+    padding-bottom: 56px;
   }
 
   .hero-pill-badge {
@@ -1512,14 +1528,14 @@
   }
 
   .hero-title {
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.25;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .hero-subtitle {
-    font-size: 13.5px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.45;
     margin-bottom: 16px;
     -webkit-line-clamp: 2;
   }
@@ -1528,7 +1544,7 @@
     flex-direction: column;
     width: 100%;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   .btn-hero-primary,
