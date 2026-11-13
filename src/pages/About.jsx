@@ -259,6 +259,74 @@ export default function About() {
       </section>
 
       {/* ========================================================
+          MEET THE FOUNDER
+          ======================================================== */}
+      <section className="founder-section">
+        <div className="container">
+          <div className="founder-grid">
+            <Reveal direction="left" delay={0.1}>
+              <div className="founder-photo-col">
+                <div className="founder-photo-wrap">
+                  <img
+                    src="/images/owner.png"
+                    alt="Founder – Crystal Power Controls"
+                    className="founder-photo"
+                  />
+                  <div className="founder-badge">
+                    <span className="founder-badge-year">Est. 2012</span>
+                    <span className="founder-badge-label">Founder & Managing Director</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal direction="right" delay={0.25}>
+              <div className="founder-content">
+                <span className="section-kicker">LEADERSHIP</span>
+                <h2 className="section-title">Meet Our Founder</h2>
+                <p className="founder-lead">
+                  Crystal Power Controls was founded with a clear vision — to make solar
+                  energy accessible, reliable and impactful for every customer, from
+                  residential homeowners to large-scale industrial enterprises.
+                </p>
+                <p className="about-body-text">
+                  With over a decade of hands-on experience in solar project development,
+                  engineering and execution, our founder has led Crystal Power Controls
+                  from a regional solar installer to a nationally recognised EPC company
+                  operating across Andhra Pradesh and Telangana.
+                </p>
+                <p className="about-body-text">
+                  Under his leadership, CPC has commissioned 1,000+ solar installations
+                  spanning residential villas, cold storage facilities, dairy plants,
+                  educational institutions, and landmark infrastructure projects including
+                  the Rajiv Gandhi International Airport solar plant.
+                </p>
+                <p className="about-body-text">
+                  His commitment to engineering quality, customer satisfaction and clean
+                  energy adoption has earned Crystal Power Controls Platinum, Diamond and
+                  Gold recognitions at the Telangana and Andhra Pradesh Annual Solar Awards.
+                </p>
+                <div className="founder-highlights">
+                  <div className="founder-highlight-item">
+                    <span className="fh-val">12+</span>
+                    <span className="fh-lbl">Years in Solar Energy</span>
+                  </div>
+                  <div className="founder-highlight-item">
+                    <span className="fh-val">1,000+</span>
+                    <span className="fh-lbl">Projects Delivered</span>
+                  </div>
+                  <div className="founder-highlight-item">
+                    <span className="fh-val">5</span>
+                    <span className="fh-lbl">National Awards</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
           3. OUR STORY
           ======================================================== */}
       <section className="our-story-section">
