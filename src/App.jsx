@@ -16,6 +16,7 @@ import WhySolar from './pages/WhySolar';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import TermsAndConditions from './pages/TermsAndConditions';
+import Awards from './pages/Awards';
 
 // Scroll to top automatically and reliably when route changes
 function ScrollToTop() {
@@ -97,6 +98,7 @@ function App() {
             <Route path="/why-solar" element={<PageTransition><WhySolar /></PageTransition>} />
             <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/awards" element={<PageTransition><Awards /></PageTransition>} />
             <Route path="/terms-and-conditions" element={<PageTransition><TermsAndConditions /></PageTransition>} />
             <Route path="*" element={<PageTransition><Home /></PageTransition>} />
           </Routes>

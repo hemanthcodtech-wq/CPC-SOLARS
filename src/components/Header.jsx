@@ -103,6 +103,12 @@ export default function Header() {
             Why Solar
           </NavLink>
           <NavLink
+            to="/awards"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+          >
+            Awards
+          </NavLink>
+          <NavLink
             to="/contact"
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
@@ -246,6 +252,17 @@ export default function Header() {
               >
                 <NavLink to="/why-solar" className="mobile-nav-link">
                   Why Solar
+                </NavLink>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  closed: { opacity: 0, x: -16 },
+                  open: { opacity: 1, x: 0 }
+                }}
+              >
+                <NavLink to="/awards" className="mobile-nav-link">
+                  Awards
                 </NavLink>
               </motion.div>
 

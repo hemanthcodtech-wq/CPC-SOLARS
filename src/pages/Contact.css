@@ -516,6 +516,17 @@ a.c-glass-val:hover {
   color: #16a34a;
 }
 
+.office-contact-row + .office-contact-row {
+  margin-top: 8px;
+}
+
+.office-map-wrap {
+  margin-top: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
 /* ========================================================
    4. WHY CONNECT WITH CPC?
    ======================================================== */

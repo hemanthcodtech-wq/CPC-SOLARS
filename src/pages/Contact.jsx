@@ -544,7 +544,23 @@ export default function Contact() {
                 </p>
                 <div className="office-contact-row">
                   <Phone size={15} color="#16a34a" />
-                  <a href="tel:+919493163424">+91 94931 63424</a>
+                  <a href="tel:+917989754514">+91 79897 54514</a>
+                </div>
+                <div className="office-contact-row">
+                  <Mail size={15} color="#16a34a" />
+                  <a href="mailto:cpc.ongole@gmail.com">cpc.ongole@gmail.com</a>
+                </div>
+                <div className="office-map-wrap">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3888.241812484513!2d77.70669719810762!3d12.956372616747364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d12.956467199999999!2d77.709312!4m5!1s0x3a4b01125fdd6a2b%3A0xd3984c3ccb767a8d!2sCrystal%20Power%20Controls%2C%20D.NO%20%3B-5%2C%20254%2F2%2C%208th%20Cross%20Rd%2C%20Venkateswara%20Nagar%2C%20Ongole%2C%20Andhra%20Pradesh%20523002!3m2!1d15.5175054!2d80.0392517!5e0!3m2!1sen!2sin!4v1794561977268!5m2!1sen!2sin"
+                    width="100%"
+                    height="220"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Ongole Office Location"
+                  />
                 </div>
               </div>
             </div>
@@ -565,7 +581,19 @@ export default function Contact() {
                 </p>
                 <div className="office-contact-row">
                   <Phone size={15} color="#16a34a" />
-                  <a href="tel:+919493163424">+91 94931 63424</a>
+                  <a href="tel:+916300353424">+91 63003 53424</a>
+                </div>
+                <div className="office-map-wrap">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3809.0031142407342!2d78.6061286751633!3d17.315398883559602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDE4JzU1LjQiTiA3OMKwMzYnMzEuMyJF!5e0!3m2!1sen!2sin!4v1794562227847!5m2!1sen!2sin"
+                    width="100%"
+                    height="220"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Hyderabad Office Location"
+                  />
                 </div>
               </div>
             </div>

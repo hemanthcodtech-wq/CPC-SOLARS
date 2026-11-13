@@ -26,12 +26,13 @@ import ServiceEnquiryForm from '../components/ServiceEnquiryForm';
 import './Projects.css';
 
 const CATEGORIES = [
-  { id: 'all', label: 'All Projects' },
+  { id: 'all', label: 'All Projects (60+)' },
+  { id: 'residential', label: 'Residential Villas' },
+  { id: 'cold-storage', label: 'Cold Storage Projects' },
   { id: 'industrial', label: 'Industrial Projects' },
   { id: 'commercial', label: 'Commercial Projects' },
-  { id: 'institutional', label: 'Institutional Projects' },
+  { id: 'institutional', label: 'Institutional & Colleges' },
   { id: 'dairy', label: 'Dairy & Food Processing' },
-  { id: 'cold-storage', label: 'Cold Storage Projects' },
   { id: 'infrastructure', label: 'Infrastructure Projects' }
 ];
 
@@ -42,11 +43,14 @@ export default function Projects() {
     activeCategory === 'all'
       ? PROJECTS_DATA
       : PROJECTS_DATA.filter((p) => {
+          if (activeCategory === 'residential') {
+            return p.categoryFilter === 'residential' || p.category.includes('Residential');
+          }
           if (activeCategory === 'industrial') {
-            return p.categoryFilter === 'industrial' || p.category === 'Industrial';
+            return p.categoryFilter === 'industrial' || p.category.includes('Industrial');
           }
           if (activeCategory === 'commercial') {
-            return p.categoryFilter === 'commercial' || p.category === 'Commercial';
+            return p.categoryFilter === 'commercial' || p.category.includes('Commercial') || p.category.includes('Healthcare');
           }
           if (activeCategory === 'institutional') {
             return (
@@ -249,7 +253,7 @@ export default function Projects() {
       </section>
 
       {/* ========================================================
-          3. PROJECT PORTFOLIO & CATEGORY FILTERING (All 19 Projects)
+          3. PROJECT PORTFOLIO & CATEGORY FILTERING (All 60+ Projects)
           ======================================================== */}
       <section className="portfolio-section" id="portfolio">
         <div className="container">
@@ -258,8 +262,9 @@ export default function Projects() {
               <span className="section-kicker">OUR PROJECT PORTFOLIO</span>
               <h2 className="section-title">Solar Projects That Make a Difference</h2>
               <p className="section-desc">
-                Explore our solar installation experience across commercial, industrial,
-                institutional and infrastructure sectors.
+                Explore our 60+ commissioned solar installations across cold storage units,
+                luxury residential villas, industrial plants, commercial establishments,
+                healthcare facilities, and educational institutions.
               </p>
             </div>
           </Reveal>
@@ -280,7 +285,7 @@ export default function Projects() {
           </Reveal>
 
           {/* Project Cards Grid */}
-          <Reveal direction="up" delay={0.2}>
+          <Reveal direction="up" delay={0.2} amount={0.01}>
             <div className="portfolio-grid">
             {filteredProjects.map((p) => (
               <div key={p.id} className="portfolio-card">
